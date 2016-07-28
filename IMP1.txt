@@ -1,0 +1,62 @@
+git commands:
+Command to create a Branch: git branch abc
+Command to check a Branch: git branch					(* current branch)
+Point to a specific Branch: git checkout xyz
+To check what are the changes done: git status
+To revert the changes done: git checkout--
+To see the difference: git diff abc
+To get Remote Branch List: git branch -a
+To update a local cache of git: git -v update
+To add untracked file: git add pqr
+To commit: git commit -m"demo" abc			git -a "message"	(all file)
+To push: git push origin abc
+To revert: git reset --hard origin/E8CybageUIDev
+
+git revert 1 change:
+git reset --hard bc3574e3bc5f794fd8e73fdcdcbfec271b8d490d
+git push origin +E8CybageUIDev:E8CybageUIDev
+git remote -v update
+git reset --hard origin/E8CybageUIDev
+
+reverting changes:
+git revert 77a2a22
+git push
+
+Creating a repo:
+git clone sshkey
+git branch -a
+git checkout --track -b develop remotes/origin/develop
+git branch
+git pull
+gitk
+
+Deleteing a repo and creating new at local and remote with update from master:
+git branch -D EF-1005-Email-Keyword-AutoSelect (deleting a repo).
+git push -u origin EF-1005-Email-Keyword-AutoSelect
+git push origin EF-1005-Email-Keyword-AutoSelect
+git remote -v update
+git checkout --track -b interactive-suite origin/interactive-suite
+git rebase
+
+Deleteing a repo:
+git branch -D EF-1084-Campaigns-Email-ClickMap
+git push origin :EF-1084-Campaigns-Email-ClickMap
+
+Createing Feature Branch
+git branch EF-1262-Email-Target-Button-State
+git push -u origin EF-1262-Email-Target-Button-State
+
+Deleteing a file
+git rm src/js/text.js
+
+Reset Head by 1
+git reset --hard HEAD~1
+
+/*NUKE THE REMOTE BRANCH */
+git push origin --delete DM-219
+
+/*REMOVE ANY REMOTE TRACKING BRANCH THAT NO LONGER EXISTS REMOTELY */ 
+git fetch -p
+
+Change commit message:
+git commit --amend -m "New commit message"
