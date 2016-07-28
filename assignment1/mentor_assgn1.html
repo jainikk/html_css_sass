@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+<style>
+header{
+	width:100%;
+	height:70px;
+	background-color:black;
+	border-bottom:5px solid #6495ED;
+}
+header .user_section{
+	
+}
+header .user_image{
+	border:2px solid white;
+	margin:10px 340px;
+	float:right;
+	
+}
+header .user_name{
+	float:right;
+	margin:-6% 290px;
+	color:white;
+}
+header .icon-section{
+	float: right;
+    margin: -6.6% 120px;
+    border-left:1px solid red;
+}
+header .icon-section ul{
+	overflow:none;
+}
+header .icon-section ul li{
+	list-style-type:none;
+	display:inline;
+}
+#main_left{
+	width:200px;
+}
+.profilepic_display{
+	float:left;
+	margin:20px 0 0 0;
+	width:170px;
+	height:170px;
+	background-color:#40E0D0;
+}
+.upload_pic{
+	float:left;
+	margin:10px 0 0 0;
+}
+
+.fileUpload,.fileUpload_greeting {
+    position: relative;
+    overflow: hidden;
+    margin:-20px 0 0 120px;
+    background-color: #e7e7e7; color: black;
+   border:1px solid black;
+   width:60px;
+}
+.fileUpload_greeting {
+  margin:-20px 0 0 250px;
+}
+.fileUpload input.upload,.fileUpload_greeting input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+}
+
+#uploadFile{
+	width:110px;
+}
+
+#uploadbutton{float:left;
+margin:7px;}
+
+.textbox1,.textbox2,.textbox3,.textbox4{
+	float:right;
+	width:400px;
+	height:30px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+.textbox1{
+	margin:-8px 0 0 10px;
+}
+.textbox2{
+	margin:-8px 0 0 10px;
+}
+.textbox3{
+	margin:-8px 0 0 10px;
+}
+.textbox4{
+	margin:-8px 0 0 10px;
+}
+#main_right{
+	float:right;
+	margin:-200px 200px 0 0;
+}
+
+
+
+
+</style>
+<body>
+<header>
+		<section class="user_section">
+				<section class="user_image">
+				<img src="man.jpg" alt="user-pic" width="40" height="40">
+				</section>
+
+				<section class="user_name">
+				<p> Jainik </p>
+				</section>
+		</section>
+		<section class="icon-section">
+				<ul>
+				<li class="help_icon"> <img src="help.png" alt="user-pic" width="30" height="30"> </li>
+				<li class="setting_icon"> <img src="setting.png" alt="user-pic" width="30" height="30"> </li>
+				<li class="power_icon"> <img src="power.png" alt="user-pic" width="30" height="30"> </li>
+				</ul>
+		</section>
+
+</header>
+<h1>User Profile</h1><hr>
+<section id="main_left">
+			<section class="profilepic_display">
+
+			</section>
+			<section class="upload_pic">
+						<p>Upload Profile Picture:</p>
+						<input id="uploadFile" disabled="disabled" />
+					<div class="fileUpload">
+					    <span>Browse...</span>
+					    <input id="uploadBtn" type="file" class="upload" />
+					</div> 
+					<button id="uploadbutton" type="submit">Upload</button>
+			</section>
+</section>
+
+<section id="main_right">
+ 
+ <h2 class="title1">Login Information </h2>
+ User Name:<input type="text" class="textbox1"/><br/><br/><br/>
+ Email Id:<input type="email" class="textbox2"/><br/><br/><br/>
+ Password:<input type="text" class="textbox3"/><br/><br/><br/>
+ Confirm Password:<input type="text" class="textbox4"/><br/><br/><br/>
+ Access Level:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input class="admin" type="checkbox" name="access_level" value="Admin"> Admin &nbsp; &nbsp;
+ 		<input type="checkbox" name="access_level" value="User"> User 
+<br/> <br/> <br/>
+<h2 class="title2">Personal Information </h2>
+ First Name:<input type="text" class="textbox1"/><br/><br/><br/>
+ Last name:<input type="text" class="textbox2"/><br/><br/><br/>
+ Employee Id:<input type="text" class="textbox3"/><br/><br/><br/>
+ Location:<input type="text" class="textbox4"/><br/><br/><br/>
+ About: <input type="text" class="textbox4"/><br/><br/><br/>
+
+ <br/> <br/> <br/>
+ <h2 class="title2">Add New Greeting</h2>
+ 	
+					Upload Greeting:
+						<input id="uploadFile" disabled="disabled" />
+					<div class="fileUpload_greeting">
+					    <span>Browse...</span>
+					    <input id="uploadBtn" type="file" class="upload" />
+					</div> 
+					
+			
+</section>
+
+</body>
+</html>
