@@ -1,0 +1,22 @@
+@import "./base/_variables.scss";
+@import "./base/_mixins.scss";
+.input_control{
+	border-radius:$border-radius;
+	width:$width;
+	height:$height;
+	font-style:$font-style;
+	font-size:$font-size;
+	padding-left:$padding-left; 
+	@include common_control(#666666,#ffffff,#ccc);
+}
+
+.disabled_control{
+	cursor:$cursor;
+	@include common_control(#999999,#eeeeee,#cccccc);
+	
+}
+
+.error_control{
+	@include common_control(#f44336,#fd7e1,#f44336);
+}
+

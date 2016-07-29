@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+#iamdiv{
+
+}</style>
+</head>
+<body id="iamdiv">
+
+<img src="nature.jpg" width="400" height="400" alt="nature"/>
+<h2> Nature </h2>
+<select id="clr" onchange="changecolor();">
+<option value="#DEB887"> BurlyWood </option>
+<option value="#5F9EA0"> CadetBlue </option>
+<option value="#7FFF00"> Chartreuse </option>
+<option value="#FF7F50"> Coral </option>
+<option value="#00FFFF"> Cyan </option>
+<option value="blue"> Blue </option>
+<option value="red"> Red </option>
+<option value="yellow"> Yellow </option>
+<option value="green"> Green </option>
+<option value="#FFD700"> Gold </option>
+<option value="#DAA520"> GoldenRod </option>
+<option value="#808080"> Grey </option>
+<option value="#FF69B4"> HotPink </option>
+<option value="#FFFFF0"> Ivory </option>
+<option value="#F0E68C"> Khaki </option>
+<option value="#000080"> Navy </option>
+<option value="#FFF5EE"> Seashell </option>
+<option value="#FA8072"> Salmon </option>
+<option value="#708090"> SlateGrey </option>
+</select>
+
+ 
+<script>
+function changecolor(){
+	var color=document.getElementById("clr").value;
+    document.getElementById("iamdiv").style.backgroundColor=color;
+}
+</script>
+</body>
+</html>

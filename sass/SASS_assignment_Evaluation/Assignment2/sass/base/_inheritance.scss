@@ -1,0 +1,12 @@
+@import "_variables.scss";
+@import "./modules/_buttons.scss";
+%base_class{
+   border-radius:$border-radius;
+  padding:$padding;
+  background-color:$base_background-color;
+  border:$base_border;
+  min-width:$min-width;
+  font-family:$font-family;
+  font-size:$font-size;
+  color:$base_color;
+}

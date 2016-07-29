@@ -1,0 +1,53 @@
+/* line 3, ../sass/base/_inheritance.scss */
+.primary_button, .primary_button_disabled, .primary_button:hover, .secondary_button, .secondary_button_disabled, .secondary_button:hover {
+  border-radius: 3 px;
+  padding: 12px 15px 12px 15px;
+  background-color: #8bc34a;
+  border: 0px;
+  min-width: 110px;
+  font-family: SegoeUISemiBold;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+/* line 5, ../sass/modules/_buttoncontrols.scss */
+.primary_button {
+  border: 1px solid #8bc34a;
+  color: #FFFFFF;
+  background-color: #8bc34a;
+}
+
+/* line 10, ../sass/modules/_buttoncontrols.scss */
+.primary_button_disabled {
+  border: 1px solid #eeeeee;
+  color: #999999;
+  background-color: #eeeeee;
+}
+
+/* line 16, ../sass/modules/_buttoncontrols.scss */
+.primary_button:hover {
+  border: 1px solid #9dce5d;
+  color: #FFFFFF;
+  background-color: #9dce5d;
+}
+
+/* line 21, ../sass/modules/_buttoncontrols.scss */
+.secondary_button {
+  border: 1px solid #2095f2;
+  color: #2095f2;
+  background-color: #FFFFFF;
+}
+
+/* line 26, ../sass/modules/_buttoncontrols.scss */
+.secondary_button_disabled {
+  border: 1px solid #cccccc;
+  color: #999999;
+  background-color: #ffffff;
+}
+
+/* line 32, ../sass/modules/_buttoncontrols.scss */
+.secondary_button:hover {
+  border: 1px solid #2095f2;
+  color: #FFFFFF;
+  background-color: #2095f2;
+}

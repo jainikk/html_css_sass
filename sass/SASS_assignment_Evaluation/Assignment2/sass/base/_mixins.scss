@@ -1,0 +1,9 @@
+@import "_variables.scss";
+@import "./modules/_buttons.scss";
+
+
+@mixin common_properties($color,$background-color,$border-color){
+border:$border $border-color;
+color:$color;
+background-color:$background-color;
+}

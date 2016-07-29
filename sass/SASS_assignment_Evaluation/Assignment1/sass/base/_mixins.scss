@@ -1,0 +1,8 @@
+
+@import "_variables.scss";
+
+@mixin common_control($color,$background-color,$border-color){
+border:$border $border-color;
+color:$color;
+background-color:$background-color;
+}

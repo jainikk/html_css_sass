@@ -1,0 +1,27 @@
+/* line 3, ../sass/modules/_inputcontrols.scss */
+.input_control {
+  border-radius: 3px;
+  width: 300px;
+  height: 36px;
+  font-style: SegoUI;
+  font-size: 13px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  color: #666666;
+  background-color: #ffffff;
+}
+
+/* line 13, ../sass/modules/_inputcontrols.scss */
+.disabled_control {
+  cursor: not-allowed;
+  border: 1px solid #cccccc;
+  color: #999999;
+  background-color: #eeeeee;
+}
+
+/* line 19, ../sass/modules/_inputcontrols.scss */
+.error_control {
+  border: 1px solid #f44336;
+  color: #f44336;
+  background-color: #fd7e1;
+}

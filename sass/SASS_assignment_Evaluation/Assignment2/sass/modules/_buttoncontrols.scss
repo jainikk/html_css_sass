@@ -1,0 +1,35 @@
+@import "./base/_variables.scss";
+@import "./base/_mixins.scss";
+@import "./base/_inheritance.scss";
+@import "_buttons.scss";
+.primary_button{
+	@extend %base_class;
+	@include common_properties(#FFFFFF,#8bc34a,#8bc34a);
+}
+
+.primary_button_disabled{
+	@extend %base_class;
+	@include common_properties(#999999,#eeeeee,#eeeeee);
+	
+}
+
+.primary_button:hover{
+	@extend %base_class;
+	@include common_properties(#FFFFFF,#9dce5d,#9dce5d);
+}
+
+.secondary_button{
+	@extend %base_class;
+	@include common_properties(#2095f2,#FFFFFF,#2095f2);
+}
+
+.secondary_button_disabled{
+	@extend %base_class;
+	@include common_properties(#999999,#ffffff,#cccccc);
+	
+}
+
+.secondary_button:hover{
+	@extend %base_class;
+	@include common_properties(#FFFFFF,#2095f2,#2095f2);
+}
