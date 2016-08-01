@@ -1,0 +1,33 @@
+
+@import "./modules/_buttons.scss";
+
+
+
+@mixin common_margin($margin...){
+margin:$margin;
+}
+
+@mixin common_width_height($width,$height){
+height:$height;
+width:$width;
+}
+
+@mixin common_bgcolor($background-color){
+background-color:$background-color;
+}
+
+@mixin common_float($float){
+float:$float;
+}
+
+@mixin common_color($color){
+color:$color;
+}
+
+@mixin common_padding($padding...){
+padding:$padding;
+}
+
+@mixin common_border($border...){
+border:$border;
+}

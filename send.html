@@ -1,0 +1,478 @@
+<!-- css -->
+
+/* line 4, ../sass/modules/_buttoncontrols.scss */
+header {
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  border-bottom: 5px solid #6495ED;
+}
+
+/* line 9, ../sass/modules/_buttoncontrols.scss */
+header .user_image {
+  margin: 10px 340px;
+  border: 2px solid white;
+  float: right;
+}
+
+/* line 15, ../sass/modules/_buttoncontrols.scss */
+header .user_name {
+  float: right;
+  margin: -6% 290px;
+  color: white;
+}
+
+/* line 20, ../sass/modules/_buttoncontrols.scss */
+header .icon-section {
+  float: right;
+  margin: -6.6% 120px;
+  border-left: 1px solid red;
+}
+
+/* line 25, ../sass/modules/_buttoncontrols.scss */
+header .icon-section ul {
+  overflow: hidden;
+}
+
+/* line 28, ../sass/modules/_buttoncontrols.scss */
+header .icon-section ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 32, ../sass/modules/_buttoncontrols.scss */
+header .icon-section ul li a {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 36, ../sass/modules/_buttoncontrols.scss */
+header .icon-section ul li a:hover {
+  color: black;
+}
+
+/* line 39, ../sass/modules/_buttoncontrols.scss */
+#main_left {
+  height: 200px;
+  width: 200px;
+}
+
+/* line 42, ../sass/modules/_buttoncontrols.scss */
+.profilepic_display {
+  float: left;
+  margin: 20px;
+  height: 170px;
+  width: 170px;
+  background-color: #40E0D0;
+}
+
+/* line 48, ../sass/modules/_buttoncontrols.scss */
+.greetingpic_display {
+  float: left;
+  margin: 20px 0 0 22%;
+  height: 80px;
+  width: 220px;
+  background-color: white;
+  text-align: center;
+  padding: 20% 0 0 0;
+  border: 1px solid #ccc;
+}
+
+/* line 58, ../sass/modules/_buttoncontrols.scss */
+.upload_pic {
+  float: left;
+  margin: 10px;
+}
+
+/* line 63, ../sass/modules/_buttoncontrols.scss */
+.fileUpload, .fileUpload_greeting {
+  position: relative;
+  overflow: hidden;
+  margin: -20px 0 0 120px;
+  background-color: #e7e7e7;
+  color: black;
+  border: 1px solid black;
+  height: 20px;
+  width: 60px;
+}
+
+/* line 72, ../sass/modules/_buttoncontrols.scss */
+.fileUpload_greeting {
+  margin: -20px 0 0 300px;
+}
+
+/* line 75, ../sass/modules/_buttoncontrols.scss */
+.fileUpload input.upload, .fileUpload_greeting input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+/* line 84, ../sass/modules/_buttoncontrols.scss */
+#uploadFile {
+  height: 15px;
+  width: 110px;
+}
+
+/* line 88, ../sass/modules/_buttoncontrols.scss */
+#uploadbutton {
+  float: left;
+  margin: 7px;
+}
+
+/* line 92, ../sass/modules/_buttoncontrols.scss */
+.textbox1, .textbox2, .textbox3, .textbox4 {
+  float: right;
+  height: 30px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* line 99, ../sass/modules/_buttoncontrols.scss */
+.textbox1, .textbox2, .textbox3, .textbox4 {
+  margin: -8px 0 0 10px;
+}
+
+/* line 103, ../sass/modules/_buttoncontrols.scss */
+#main_right {
+  float: right;
+  margin: -17% 32% 0 0;
+}
+
+/* line 109, ../sass/modules/_buttoncontrols.scss */
+.warning {
+  color: red;
+}
+
+/* line 113, ../sass/modules/_buttoncontrols.scss */
+.buttons {
+  float: left;
+  margin: 10px;
+  height: 45px;
+  width: 100%;
+  background-color: #40E0D0;
+}
+
+/* line 119, ../sass/modules/_buttoncontrols.scss */
+.cancel_button {
+  height: 30px;
+  width: 60px;
+  position: absolute;
+  margin: 1% 0 0 85%;
+  color: black;
+}
+
+/* line 125, ../sass/modules/_buttoncontrols.scss */
+.save_button {
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  background-color: #FF00FF;
+  color: white;
+  margin: 1% 0 0 80%;
+}
+
+/* line 133, ../sass/modules/_buttoncontrols.scss */
+.footer {
+  float: left;
+  margin: 20px;
+  background-color: black;
+  height: 30px;
+  width: 100%;
+}
+
+<!-- mixins.scss -->
+@import "./modules/_buttons.scss";
+
+
+
+@mixin common_margin($margin...){
+margin:$margin;
+}
+
+@mixin common_width_height($width,$height){
+height:$height;
+width:$width;
+}
+
+@mixin common_bgcolor($background-color){
+background-color:$background-color;
+}
+
+@mixin common_float($float){
+float:$float;
+}
+
+@mixin common_color($color){
+color:$color;
+}
+
+@mixin common_padding($padding...){
+padding:$padding;
+}
+
+@mixin common_border($border...){
+border:$border;
+}
+
+
+<!-- _buttons.scss -->
+
+$width:width;
+ $height:height;
+ $background-color:background-color;
+$border:border;
+ $border-right:border-right;
+	$border-left:1px solid red;
+ $overflow:hidden;
+ $list-style-type:none;
+ $display:inline;
+ $text-align:center;
+ $position:absolute;
+ $top:0;
+ $right:0;
+ $font-size:20px;
+ $border-radius:4px;
+$position1:relative;
+$border-bottom:5px solid #6495ED;
+
+<!-- buttoncontrols.scss -->
+@import "./base/_mixins.scss";
+@import "_buttons.scss";
+
+header{
+	@include common_width_height(100%,70px);
+	@include common_bgcolor(black);
+	border-bottom:$border-bottom;
+}
+header .user_image{
+	@include common_margin(10px 340px);	
+	@include common_border(2px solid white);
+	@include common_float(right);
+	
+}
+header .user_name{
+	@include common_float(right);
+	@include common_margin(-6% 290px);	
+	@include common_color(white);
+}
+header .icon-section{
+	@include common_float(right);
+    @include common_margin(-6.6% 120px);
+    border-left:$border-left;
+}
+header .icon-section ul{
+	overflow:$overflow;
+}
+header .icon-section ul li{
+	list-style-type:$list-style-type;
+	display:$display;
+}
+header .icon-section ul li a{
+	list-style-type:$list-style-type;
+	display:$display;
+}
+header .icon-section ul li a:hover{
+	@include common_color(black);
+}
+#main_left{
+	@include common_width_height(200px,200px);
+}
+.profilepic_display{
+	@include common_float(left);
+	@include common_margin(20px);
+	@include common_width_height(170px,170px);
+	@include common_bgcolor(#40E0D0);
+}
+.greetingpic_display{
+	@include common_float(left);
+	@include common_margin(20px 0 0 22%);
+	@include common_width_height(220px,80px);
+	@include common_bgcolor(white);
+	text-align:$text-align;
+	@include common_padding(20% 0 0 0);
+	@include common_border(1px solid #ccc);;
+
+}
+.upload_pic{
+	@include common_float(left);
+	@include common_margin(10px);
+}
+
+.fileUpload,.fileUpload_greeting {
+    position:$position1;
+    overflow:$overflow;
+   @include common_margin(-20px 0 0 120px);
+    @include common_bgcolor(#e7e7e7); 
+    @include common_color(black);
+  @include common_border(1px solid black); 
+  @include common_width_height(60px,20px);
+}
+.fileUpload_greeting {
+  @include common_margin(-20px 0 0 300px);
+}
+.fileUpload input.upload,.fileUpload_greeting input.upload {
+    position:$position;
+    top:$top;
+    right:$right;
+    @include common_margin(0);
+    @include common_padding(0);
+    font-size:$font-size;
+}
+
+#uploadFile{
+	@include common_width_height(110px,15px);
+}
+
+#uploadbutton{
+@include common_float(left);
+@include common_margin(7px);}
+
+.textbox1,.textbox2,.textbox3,.textbox4{
+	@include common_float(right);
+	@include common_width_height(400px,30px);
+	@include common_border(1px solid #ccc);
+        border-radius:$border-radius;
+
+}
+.textbox1,.textbox2,.textbox3,.textbox4{
+	@include common_margin(-8px 0 0 10px);
+}
+
+#main_right{
+	@include common_float(right);
+	@include common_margin(-17% 32% 0 0);
+}
+
+
+.warning{
+@include common_color(red);
+}
+
+.buttons{
+	@include common_float(left);
+	@include common_margin(10px);
+	@include common_width_height(100%,45px);
+	@include common_bgcolor(#40E0D0);
+}
+.cancel_button{
+	@include common_width_height(60px,30px);
+	position:$position;
+ @include common_margin(1% 0 0 85%);
+  @include common_color(black);
+}
+.save_button{
+	@include common_width_height(40px,30px);
+	position:$position;
+	@include common_bgcolor(#FF00FF);
+	@include common_color(white);
+	@include common_margin(1% 0 0 80%);
+}
+
+.footer{
+	@include common_float(left);
+	@include common_margin(20px);
+	@include common_bgcolor(black);
+	@include common_width_height(100%,30px);
+}
+
+
+<!-- main.scss -->
+@import "base/_mixins.scss";
+@import "modules/_buttons.scss";
+@import "modules/_buttoncontrols.scss";
+
+<!-- html -->
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+<header>
+		<section class="user_section">
+				<section class="user_image">
+				<img src="man.jpg" alt="user-pic" width="40" height="40">
+				</section>
+
+				<section class="user_name">
+				<p> Jainik </p>
+				</section>
+		</section>
+		<section class="icon-section">
+				<ul>
+				<li class="help_icon"> <a href=""> <img src="help.png" alt="user-pic" width="30" height="30"> </a> </li>
+				<li class="setting_icon"> <a href=""> <img src="setting.png" alt="user-pic" width="30" height="30"> </a> </li>
+				<li class="power_icon"> <a href=""> <img src="power.png" alt="user-pic" width="30" height="30"> </a> </li>
+				</ul>
+		</section>
+
+</header>
+<h1>User Profile</h1><hr>
+<section id="main_left">
+			<section class="profilepic_display">
+
+			</section>
+			<section class="upload_pic">
+						<p>Upload Profile Picture:</p>
+						<input id="uploadFile" disabled="disabled" />
+					<div class="fileUpload">
+					    <span>Browse...</span>
+					    <input id="uploadBtn" type="file" class="upload" />
+					</div> 
+					<button id="uploadbutton" type="submit">Upload</button>
+			</section>
+</section>
+
+<section id="main_right">
+ 
+ <h2 class="title1">Login Information </h2>
+ User Name:<input type="text" class="textbox1"/><br/><br/><br/>
+ Email Id:<input type="email" class="textbox2"/><br/><br/><br/>
+ Password:<input type="text" class="textbox3"/><br/><br/><br/>
+ Confirm Password:<input type="text" class="textbox4"/><br/><br/><br/>
+ Access Level:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input class="admin" type="checkbox" name="access_level" value="Admin"> Admin &nbsp; &nbsp;
+ 		<input type="checkbox" name="access_level" value="User"> User 
+<br/> <br/> <br/>
+<h2 class="title2">Personal Information </h2>
+ First Name:<input type="text" class="textbox1"/><br/><br/><br/>
+ Last name:<input type="text" class="textbox2"/><br/><br/><br/>
+ Employee Id:<input type="text" class="textbox3"/><br/><br/><br/>
+ Location:<input type="text" class="textbox4"/><br/><br/><br/>
+ About: <input type="text" class="textbox4"/><br/><br/><br/>
+
+ <br/> <br/> <br/>
+ <h2 class="title2">Add New Greeting</h2>
+ 	
+					Upload Greeting:
+						<input id="uploadGreeting" disabled="disabled" />
+					<div class="fileUpload_greeting">
+					    <span>Browse...</span>
+					    <input id="uploadBtn" type="file" class="upload" />
+					</div> 
+					<p class="warning">(Upload greeting in .jpg, .png ,.pdf format only)</p>
+					<section class="greetingpic_display">
+					No Image Available
+					</section>
+					
+			
+</section>
+
+<section class="buttons">
+
+<input class="cancel_button" type="submit" value="cancel" name="cancel">
+
+<input class="save_button" type="submit" value="save" name="save">
+
+</section>
+
+
+<section class="footer">
+
+</section>
+
+</body>
+</html>
