@@ -1,0 +1,18 @@
+@import "_variables.scss";
+@import "./modules/_buttons.scss";
+
+
+
+@mixin common_margin($margin...){
+margin:$margin;
+}
+
+@mixin common_width_height($width,$height){
+height:$height;
+width:$width;
+}
+
+@mixin common_bgcolor($background-color){
+background-color:$background-color;
+}
+

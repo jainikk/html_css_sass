@@ -1,0 +1,7 @@
+@import "./base/_variables.scss";
+@import "./base/_mixins.scss";
+@import "_buttons.scss";
+
+header{
+	@include common_width_height(100%,70px,black);
+}
