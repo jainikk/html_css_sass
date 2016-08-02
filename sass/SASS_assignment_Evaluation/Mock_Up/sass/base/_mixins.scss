@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "./modules/_buttons.scss";
+
+@import "./modules/_variables.scss";
 
 
 
@@ -16,3 +16,18 @@ width:$width;
 background-color:$background-color;
 }
 
+@mixin common_float($float){
+float:$float;
+}
+
+@mixin common_color($color){
+color:$color;
+}
+
+@mixin common_padding($padding...){
+padding:$padding;
+}
+
+@mixin common_border($border...){
+border:$border;
+}
