@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+
+function  send(name){
+
+	return function(){
+		sendHi(name);
+
+	}
+
+}
+
+function sendHi(msg)
+{
+	console.log("hello" + msg);
+
+}
+
+var func= send("hiii");
+func();
+
+sendHi("Pete");
+func();
+</script>
+</body>
+</html>

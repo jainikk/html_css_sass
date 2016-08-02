@@ -1,0 +1,21 @@
+var x=10;
+var y=10;
+{
+	var x=5;
+	var y=5;
+		{
+			var x=2;
+			var y=2;
+			{
+				document.write("x:" + x + "<br>");
+				document.write("y:" + y + "<br>");
+			}
+
+			
+			document.write("x:" + x + "<br>");
+			document.write("y:" + y + "<br>");
+		}
+			
+	document.write("x:" + x + "<br>");
+	document.write("y:" + y + "<br>");
+}

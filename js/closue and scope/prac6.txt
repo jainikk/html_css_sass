@@ -1,0 +1,8 @@
+function sayHello(name){
+ var text="Hello " + name;
+ var sayAlert= function(){console.log("inner function"),alert(text);
+
+} 
+ return sayAlert
+ 
+}

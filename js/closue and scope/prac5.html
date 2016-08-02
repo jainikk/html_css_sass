@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+
+function myChoice(theObject){
+ theObject.brand="toyota";
+ theObject.model="corolla"; 
+ theObject.year=2012;
+}
+
+function show(car){
+ console.log(car.brand);
+ console.log(car.model);
+ console.log(car.year);
+}
+
+var mycar={
+ brand:"honda",
+ model:"Accord",
+ year:1889
+
+};
+
+console.log(mycar.brand);
+myChoice(mycar);
+
+console.log(mycar.brand);
+show(mycar);
+
+</script>
+</body>
+</html>

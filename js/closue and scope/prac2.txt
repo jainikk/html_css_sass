@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+
+var richa="a horse with rider";
+function antiquities()
+{
+  var richa="hsg dhaHDS HJDSKAF HFJAKFJ";
+}
+antiquities();
+richa += "as seen from the distance";
+document.write(richa);
+
+</script>
+</body>
+</html>

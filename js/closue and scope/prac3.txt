@@ -1,0 +1,12 @@
+var anum=100;
+twaek();
+
+function twaek();
+{
+
+   if(false)
+	{var anum=123;} 
+
+	 document.write(anum);
+}
+5twaek();
