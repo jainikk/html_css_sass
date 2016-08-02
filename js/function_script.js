@@ -1,14 +1,108 @@
-var object={
+var sample_object={
 	username:''
-}
+};
 
 
-function AnimalTestUser(username){
+
+function AnimalTestUser(username,hobbies,number){
 	console.log(arguments.length);
-	object.username=username;
-	return object;
+	if(arguments.length>1){
+		Object.defineProperty(sample_object,'otherArgs',{value:[hobbies,number]});
+
+	}
+	sample_object.username=username;
+	return sample_object;
 
 }
+console.log(sample_object);
 var testSheep = AnimalTestUser('CottonBall');
 console.log(testSheep);
 
+var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true}, [1,2,3] );
+console.log(testSheep);
+
+var animal={
+	username:'',
+	species:'',
+	tagline:'',
+	noises:[],
+	friends:[]
+};
+
+function AnimalCreator(username,species,tagline,noises){
+	animal.username=username;
+	animal.species=species;
+	animal.tagline=tagline;
+	animal.noises=noises;
+	return animal;
+}
+
+var sheep = new AnimalCreator('Cloud', 'sheep', 'You can count on me!', ['baahhh', 'arrgg', 'chewchewchew']);
+console.log(sheep);
+
+/*function addFriend(animal_object1,animal_object2){
+	var animal1=AnimalCreator(animal_object1.username,animal_object1.species,animal_object1.tagline,animal_object1.noises);
+	animal1.friends.push(animal_object2);
+}*/
+
+var cow={
+	username: 'Moo', 
+	species: 'cow',
+	tagline:'im cow',
+	noises:['Moo','low','bawl'],
+	friends:[]
+	};
+/*	addFriend(sheep, cow);
+  console.log(sheep);
+ */
+  var llama={
+	  username: 'Zeny',
+	  species: 'llama',
+	  tagline:'im llama',
+	  noises:['humming'],
+	  friends:[]
+	  };
+ /*    addFriend(sheep, llama);
+  console.log(sheep);
+  */
+  function addFriend(animal_object1,animal_object2){
+	//var animal1=AnimalCreator(animal_object1.username,animal_object1.species,animal_object1.tagline,animal_object1.noises);
+//	animal1.friends.push(animal_object2.username); 
+	animal_object1.friends.push(animal_object2.username);
+    }
+
+	addFriend(sheep, cow);
+  console.log(sheep);
+  
+  addFriend(sheep, llama);
+  console.log(sheep);
+
+var myFarm=[];
+
+addFriend(llama,cow);
+addFriend(cow,llama);
+
+myFarm.push(sheep);
+myFarm.push(llama);
+myFarm.push(cow);
+
+
+console.log(myFarm);
+
+function addMatchesArray(myFarm){
+	for(i=0;i<myFarm.length;i++)
+	Object.defineProperty(myFarm[i],'matches',{value:[]});
+}
+
+addMatchesArray(myFarm); 
+console.log(myFarm[0]);
+console.log(myFarm[1]);
+console.log(myFarm[2]);
+
+function giveMatches(myFarm){
+	for(i=0;i<myFarm.length;i++)
+		myFarm[i].matches.push(myFarm[i].friends[myFarm[i].friends.length-1]);
+	}
+	
+giveMatches(myFarm); 
+console.log(myFarm[0]); 
