@@ -1,0 +1,109 @@
+var horse="a horse";                                      //scope intro
+function horse1(){
+var horse="my horse";
+ funtion horse2(){
+ var horse="my horse2";
+ }
+ console.log(horse);
+}
+//horse1();
+var horse= horse + "is an animal";
+document.write(horse);
+
+
+
+funtion 1(){                                                   //global scope
+var x=10;
+var y=10;
+function 2(){}document.write("x:"+x+"</br>");
+document.write("y:"+y+"</br>");
+}
+
+var anumber=100;
+
+function tweak(){
+
+if(false)
+{
+var anumber=123;
+}
+document.write(anumber);
+}
+tweak();
+
+
+function send(name){                                                    //function within a function
+return function(){
+sendHi(name);                          
+}
+}
+function sendHi(msg){
+console.log("hello" +msg);
+}
+var func= send('bill');
+func();
+sendHi('pete');
+func();
+
+
+function choice(object1){
+object1.brand="Maruti";
+object1.model="Suzuki";
+object1.year="2016";
+}
+function show(car){
+console.log(car.brand);
+console.log(car.model);
+console.log(car.year);
+}
+var mycar= new Object(); //{brand:"toyota",model:"corolla",year:"2000"};
+console.log(mycar.brand);
+choice(mycar);
+console.log(mycar.brand);
+show(mycar);
+  
+ 
+
+function sayHello(name){
+var text= 'hello'+ name;
+var sayalert= function(){console.log("inner function");alert(text)}
+return sayalert;
+}                                                                           //closures
+var say2= sayHello("sachin");
+say2();		
+
+
+
+
+var arr=["a","b","c","d"];                                                  //prototypes[array]
+var arr2=["e","f","g","h"];
+Object.defineProperty(Array.prototype,'last',{get:function (){return this[this.length-1]}});
+console.log(arr.last);
+console.log(arr2.last);
+
+
+
+
+var arr=new Array('a','b','c','d');                                                  //prototypes[array]
+var arr2=new Array('e','f','g','h');
+Object.defineProperty(Array.prototype,'last',{get:function (){return this[this.length-1]}});
+console.log(arr.last);
+console.log(arr2.last);
+
+
+
+var animal={color:"red"};                                                              //protoypes[object]
+var rabit= {jump:"yes"};
+rabit.__proto__=animal
+console.log(rabit);	
+
+
+
+function Cat(name,color){
+this.name=name;
+this.color=color;
+}
+Cat.prototype.age=3;
+var fluffy= new Cat("Fluffy","white");
+var muffin= new Cat("Muffin","brown");
+fluffy.age=5;																		
