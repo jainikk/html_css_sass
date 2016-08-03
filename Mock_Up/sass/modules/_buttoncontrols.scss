@@ -1,0 +1,146 @@
+@import "./base/_variables.scss";
+@import "./base/_mixins.scss";
+@import "_buttons.scss";
+
+header{
+	@include common_width_height(100%,70px);
+	@include common_bgcolor(black);
+}
+header .user_image{
+	@include common_margin(10px 340px);	
+	$border:2px solid white;
+	$float:right;
+	
+}
+header .user_name{
+	$float:right;
+	@include common_margin(-6% 290px);	
+	$color:white;
+}
+header .icon-section{
+	$float: right;
+    @include common_margin(-6.6% 120px);
+    $border-left:1px solid red;
+}
+header .icon-section ul{
+	$overflow:none;
+}
+header .icon-section ul li{
+	$list-style-type:none;
+	$display:inline;
+}
+header .icon-section ul li a{
+	$list-style-type:none;
+	$display:inline;
+}
+header .icon-section ul li a:hover{
+	$color:black;
+}
+#main_left{
+	@include common_width_height(200px,200px);
+}
+.profilepic_display{
+	$float:left;
+	@include common_margin(20px);
+	@include common_width_height(170px,170px);
+	@include common_bgcolor(#40E0D0);
+}
+.greetingpic_display{
+	$float:left;
+	@include common_margin(20px 0 0 22%);
+	@include common_width_height(220px,80px);
+	@include common_bgcolor(white);
+	$text-align:center;
+	$padding:20% 0 0 0;
+	$border:1px solid #ccc;
+
+}
+.upload_pic{
+	$float:left;
+	@include common_margin(10px);
+}
+
+.fileUpload,.fileUpload_greeting {
+    $position: relative;
+    $overflow: hidden;
+   @include common_margin(-20px 0 0 120px);
+    @include common_bgcolor(#e7e7e7); 
+    $color: black;
+   $border:1px solid black;
+  @include common_width_height(60px,20px);
+}
+.fileUpload_greeting {
+  @include common_margin(-20px 0 0 300px);
+}
+.fileUpload input.upload,.fileUpload_greeting input.upload {
+    $position: absolute;
+    $top: 0;
+    $right: 0;
+    @include common_margin(0);
+    $padding: 0;
+    $font-size: 20px;
+}
+
+#uploadFile{
+	@include common_width_height(110px,15px);
+}
+
+#uploadbutton{
+$float:left;
+@include common_margin(7px);}
+
+.textbox1,.textbox2,.textbox3,.textbox4{
+	$float:right;
+	@include common_width_height(400px,30px);
+	$border: 1px solid #ccc;
+        $border-radius: 4px;
+
+}
+.textbox1{
+	@include common_margin(-8px 0 0 10px);
+}
+.textbox2{
+	@include common_margin(-8px 0 0 10px);
+}
+.textbox3{
+	@include common_margin(-8px 0 0 10px);
+}
+.textbox4{
+	@include common_margin(-8px 0 0 10px);
+}
+#main_right{
+	$float:right;
+	@include common_margin(-20% 22%);
+}
+
+
+.warning{
+$color:red;
+}
+
+.buttons{
+	$float:left;
+	@include common_margin(10px);
+	@include common_width_height(100%,45px);
+	@include common_bgcolor(#40E0D0);
+}
+.cancel_button{
+	@include common_width_height(60px,30px);
+	$position:absolute;
+ @include common_margin(1% 0 0 85%);
+  $color:black;
+}
+.save_button{
+	@include common_width_height(40px,30px);
+	$position:absolute;
+	@include common_bgcolor(#FF00FF);
+	$color:white;
+	@include common_margin(1% 0 0 80%);
+}
+
+.footer{
+	$float:left;
+	@include common_margin(20px);
+	@include common_bgcolor(black);
+	@include common_width_height(100%,30px);
+}
