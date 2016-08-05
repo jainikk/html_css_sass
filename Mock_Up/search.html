@@ -1,0 +1,62 @@
+<html>
+<body>
+<div id="result1">
+</div>
+<div id="result2">
+</div>
+<div id="result3">
+</div>
+<script>
+var abc=["my name","my company"];
+
+function search(data){
+	//method1
+	var flag=false;
+
+	for(i=0;i<abc.length;i++){
+		if(data==abc[i]){
+			flag=true;
+		}
+		
+	}
+	if(flag)  document.getElementById("result1").innerHTML = data + " is present in array.<br/>";
+	else document.getElementById("result2").innerHTML = data + " is not present in array.<br/>";
+
+}
+
+search("hi"); // not present
+search("my company"); //  present
+
+//method2 by match()
+     var str= abc.toString();
+var res = str.match(/my name/);
+    if(res===null)
+           document.write("not present<br/>");
+     else 
+     	document.write(res+" is present<br/>");
+
+     //method3 by split()
+     var str=[];
+     str= abc.toString().split(',');
+     var data="name";
+var flag=false;
+
+	for(i=0;i<str.length;i++){
+		if(data==str[i]){
+			flag=true;
+		}
+		
+	}
+	if(flag)  document.write(data+" matched<br/>")
+	else document.write(data+" not found<br/>");
+
+//method 4 by search()
+  var result=abc.toString().search(/my name/);
+  if(result==-1)
+  		document.write("my name not found<br/>");
+  	else
+  		document.write("my name founded");
+
+;</script>
+</body>
+</html>
