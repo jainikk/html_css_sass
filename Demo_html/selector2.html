@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#print,#write{
+border:3px solid black;
+height:40px; }
+</style>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<script>
+var find=$("#grandpa").find();
+var children=$("#grandpa").children();
+
+$("#print").html(find);
+console.log(children);
+
+var findme=$("#grandpa").find("#me");
+console.log(findme);
+
+var childrenme=$("#grandpa").children("div[id='me']");
+console.log(childrenme);
+
+var pa=document.getElementById("pa");
+//console.log(pa);
+//console.log(pa.length);
+console.log($("#pa").length);
+if($("#pa").length==1){
+  console.log('available'); }
+  else {
+  console.log('element not available'); }
+  
+  var elepa=$("#me");
+  var div=elepa.get(0);
+  var div1=elepa.get(1);
+  console.log(div);
+  function hi(){
+  $("#print").on("click",function() {
+  console.log("u clicked me");
+  });
+  }
+  
+  function Load() {
+  $("#write").on("click",function() {
+  console.log("click triggered on div"); });
+  }
+  
+  function forcetrigger(){
+  $("#write").trigger("click"); }
+   </script>	
+</head>
+<body onload="Load();">
+	<div id="grandpa" style="border: 3px solid black; width: 700px;">
+		Grandparent
+		<div id="pa" style="border: 2px solid black; width: 400px;">
+			Father
+				<div id="me" style="border: 1px solid black; width: 200px;">
+					Me
+				</div>
+		</div>
+	</div>
+<!--	<div id="print" onclick="hi();"> </div>
+	-->
+	
+	<div id="write"> click me </div>
+	<input type="button" onclick="forcetrigger()" value="forecetrigger"> </input>
+</body>
+</html>

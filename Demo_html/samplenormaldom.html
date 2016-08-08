@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Validate Inputs</title>
+	<style>
+		body {
+			font-family: Calibri;
+		}
+		.content {
+			text-align: center;
+		}
+		.content table {
+			margin: 0px auto;
+		}
+		.green {
+			color: green;
+		}
+		.red {
+			color: red;
+		}
+	</style>
+
+	<script>
+	// Hey...
+	// Write code here
+	
+	
+	// Validate the inputs on this page.
+	function ValidateForm() {
+	     var regex;
+		 //validate name
+		var uname= document.getElementById('name').value;
+		var nmsg = document.getElementById('namemessage');
+		
+		regex = /\b[a-zA-Z]+\b/;
+		if(regex.test(uname)){
+			nmsg.innerHTML = 'Valid!';
+			nmsg.setAttribute('class','green');
+		}
+		else{
+		    
+			nmsg.innerHTML = ' Not Valid!';
+			nmsg.setAttribute('class','red');
+		
+		}
+		//validate age
+		 var age = document.getElementById('age').value;
+		 var agemsg=document.getElementById('agemessage');
+		 regex = /\b[0-9]+\b/;
+		 
+		 if(regex.test(age)){
+			agemsg.innerHTML = 'Valid!';
+			agemsg.setAttribute('class','green');
+		}
+		else{
+		    
+			agemsg.innerHTML = ' Not Valid!';
+			agemsg.setAttribute('class','red');
+		
+		}
+	}
+
+	// Reset any messages that were displayed.
+	function ResetMessage() {
+	     document.getElementById('name').value=' ';
+		var nmsg = document.getElementById('namemessage');
+		nmsg.innerHTML = ' ';
+		 document.getElementById('agemessage').value=' ';
+		  var agemsg=document.getElementById('agemessage');
+         agemsg.innerHTML = ' ';
+	}
+	</script>
+</head>
+<body>
+	<div class="content">
+		<h1>Validate Inputs</h1>
+		<form>
+			<div>
+				<span>Name:</span>
+				<input id="name" type="text" />
+				<span name='message' id="namemessage"></span>
+			</div>
+			<br / >
+			<div>
+				<span>Age:</span>
+				<input id="age" type="text" />
+				<span name='message' id="agemessage"></span>
+			</div>
+			<br / >
+			<div>
+				<input type="button" value="Validate Inputs" onclick="ValidateForm();">
+				<input type="button" value="Reset Messages" onclick="ResetMessage();">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -182,3 +182,38 @@ header .icon-section ul li a:hover {
   height: 30px;
   width: 100%;
 }
+
+#namemessage1{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage2{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage3{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage4{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage5{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+.red{
+color:red; }
+
+#errorbox{
+display:none; }

@@ -1,6 +1,140 @@
 <!DOCTYPE html>
+<html>
 <head>
 <link rel="stylesheet" href="stylesheets/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+function Reset(){
+$("#username").val('');
+$("#emailid").val('');
+$("#firstname").val('');
+$("#emp_id").val('');
+$("#password").val('');
+$("#cnfpassword").val('');
+$(".access_level").prop('checked', false); ;
+$("#lastname").val('');
+$("#location").val('');
+$("#about").val('');
+
+$("#namemessage1").html('');
+$("#namemessage2").html('');
+$("#namemessage3").html('');
+$("#namemessage4").html('');
+$("#namemessage5").html('');
+
+}
+function ValidateForm() {
+	$("#errorbox").css("display", "block");
+	var regex;
+		 //validate name
+		var uname= $("#username").val();
+		var error=true;
+		
+		regex = /\b[a-zA-Z]+\b/;
+
+		if(regex.test(uname)){
+			if(uname.length>2 && uname.length<9){
+				error=false;
+			 }
+			else{$("#namemessage1").html('no of char in username should be between 3 to 8.');
+			$("#namemessage1").attr('class', 'red');} }
+			else{
+		    
+				$("#namemessage1").html('username not valid,use alphabets only');
+			$("#namemessage1").attr('class', 'red');		
+		}
+		
+		var emailid= $("#emailid").val();
+	     //console.log(emailid);
+		var atdrate=emailid.search("@");
+		var dot=emailid.search(".com");
+		//console.log("@="+atdrate);
+		//console.log("dot="+dot);
+		if(atdrate!=-1 && (dot!=-1 && dot!=0)){
+           //console.log("valid email");
+           errror=false;
+		}
+		else{
+			$("#namemessage4").html('Not valid email id');
+			$("#namemessage4").attr('class', 'red');
+		}
+		var fname= $("#firstname").val();
+		if(regex.test(fname)){
+			if(fname.length>3){
+			 }
+			else{
+				error=true;
+				$("#namemessage2").text('no of char in firstname should be more than 3');
+			$("#namemessage2").attr('class', 'red');} }
+			else if(fname.length!=0){
+		    error=true;
+				$("#namemessage2").text('Not valid,firstname should contain alphabets only');
+			$("#namemessage2").attr('class', 'red');		
+		}
+		
+		var emp_id= $("#emp_id").val();
+		//console.log(emp_id);
+		var agemsg = $("agemessage");
+		
+		regex = /\b[0-9]+\b/;
+		if(regex.test(emp_id)){
+			//console.log("inside regex");
+			if(emp_id.length<6 && emp_id.length>0){}
+			else{
+				error=true;
+				$("#namemessage3").html('no of digit in employee id should be less than 6');
+			$("#namemessage3").attr('class', 'red');
+			} }
+			else if(emp_id.length!=0){
+		    	error=true;
+				$("#namemessage3").html('Not valid,employee id should contain numerical only.');
+			$("#namemessage3").attr('class', 'red');		
+		}
+
+		var password= $("#password").val();
+		var cnfpwd= $("#cnfpassword").val();
+
+		if(password==cnfpwd){//console.log("password matched");
+				}
+	     else{
+	     	error=true;
+	     	$("#namemessage5").html("invalid password,password doesn't match");
+			$("#namemessage5").attr('class', 'red');
+	     } 
+
+		if(uname.length==0){
+			error=true;
+			$("#namemessage1").html('Username can not be empty');
+			$("#namemessage1").attr('class', 'red');
+		}
+		
+		
+		if(emailid.length==0){
+			error=true;
+			$("#namemessage4").html('email id can not be empty');
+			$("#namemessage4").attr('class', 'red');
+		}
+		if(password.length==0 || cnfpwd.length==0){
+			error=true;
+			$("#namemessage5").html('password can not be empty');
+			$("#namemessage5").attr('class', 'red');
+		}
+
+		var access_level=$("input[type='checkbox']:checked").val();
+		console.log("level="+access_level);
+		var lname=$('#lastname').val();
+		var location=$('#location').val();
+		var about=$('#about').val();
+
+		if(!error){
+
+			alert("username="+uname+"\nemail Id="+emailid+"\npassword="+password+"\naccess level="+access_level+"\nfirst name="+fname+"\nlast name="+lname+"\nemployee Id="+emp_id+"\nLocation="+location+"\nAbout="+about);
+		}
+
+
+	}
+
+</script>
 </head>
 <body>
 <header>
@@ -22,7 +156,30 @@
 		</section>
 
 </header>
-<h1>User Profile</h1><hr>
+<h1>User Profile</h1>
+<section id="errorbox">
+<section id="namemessage1">
+
+
+</section>
+<section id="namemessage2">
+
+
+</section>
+<section id="namemessage3">
+
+
+</section>
+<section id="namemessage4">
+
+
+</section>
+<section id="namemessage5">
+
+
+</section>
+</section>
+<hr>
 <section id="main_left">
 			<section class="profilepic_display">
 
@@ -41,19 +198,24 @@
 <section id="main_right">
  
  <h2 class="title1">Login Information </h2>
- User Name:<input type="text" class="textbox1"/><br/><br/><br/>
- Email Id:<input type="email" class="textbox2"/><br/><br/><br/>
- Password:<input type="text" class="textbox3"/><br/><br/><br/>
- Confirm Password:<input type="text" class="textbox4"/><br/><br/><br/>
- Access Level:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input class="admin" type="checkbox" name="access_level" value="Admin"> Admin &nbsp; &nbsp;
- 		<input type="checkbox" name="access_level" value="User"> User 
+
+ User Name:<input id="username" type="text" class="textbox1"  /><br/><br/><br/>
+ Email Id:<input type="email" id="emailid"  class="textbox2" /><br/><br/><br/>
+ Password:<input type="password" id="password" class="textbox3" /><br/><br/><br/>
+ Confirm Password:<input type="password" id="cnfpassword" class="textbox4"/><br/><br/><br/>
+ Access Level:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+
+
+
+ <input type="checkbox" class="access_level" name="access_level" value="Admin"> Admin &nbsp; &nbsp;
+ 		<input type="checkbox" class="access_level" name="access_level" value="User"> User 
 <br/> <br/> <br/>
 <h2 class="title2">Personal Information </h2>
- First Name:<input type="text" class="textbox1"/><br/><br/><br/>
- Last name:<input type="text" class="textbox2"/><br/><br/><br/>
- Employee Id:<input type="text" class="textbox3"/><br/><br/><br/>
- Location:<input type="text" class="textbox4"/><br/><br/><br/>
- About: <input type="text" class="textbox4"/><br/><br/><br/>
+ First Name:<input type="text" id="firstname"  class="textbox1"/><br/><br/><br/>
+ Last name:<input type="text" id="lastname" class="textbox2"/><br/><br/><br/>
+ Employee Id:<input type="text"  id="emp_id" class="textbox3"/><br/><br/><br/>
+ Location:<input type="text" id="location"  class="textbox4"/><br/><br/><br/>
+ About: <input type="text" id="about" class="textbox4"/><br/><br/><br/>
 
  <br/> <br/> <br/>
  <h2 class="title2">Add New Greeting</h2>
@@ -74,9 +236,9 @@
 
 <section class="buttons">
 
-<input class="cancel_button" type="submit" value="cancel" name="cancel">
+<input class="cancel_button" type="submit" value="cancel" name="cancel" onclick="Reset();">
 
-<input class="save_button" type="submit" value="save" name="save">
+<input class="save_button" type="submit" value="save" onclick="ValidateForm();" name="save">
 
 </section>
 
