@@ -74,7 +74,7 @@ function ValidateForm() {
 		
 		var emp_id= $("#emp_id").val();
 		//console.log(emp_id);
-		var agemsg = $("agemessage");
+		
 		
 		regex = /\b[0-9]+\b/;
 		if(regex.test(emp_id)){
@@ -199,9 +199,9 @@ function ValidateForm() {
  
  <h2 class="title1">Login Information </h2>
 
- User Name:<input id="username" type="text" class="textbox1"  /><br/><br/><br/>
- Email Id:<input type="email" id="emailid"  class="textbox2" /><br/><br/><br/>
- Password:<input type="password" id="password" class="textbox3" /><br/><br/><br/>
+ User Name<superscript>*</superscript>:<input id="username" type="text" class="textbox1"  /><br/><br/><br/>
+ Email Id<superscript>*</superscript>:<input type="email" id="emailid"  class="textbox2" /><br/><br/><br/>
+ Password<superscript>*</superscript>:<input type="password" id="password" class="textbox3" /><br/><br/><br/>
  Confirm Password:<input type="password" id="cnfpassword" class="textbox4"/><br/><br/><br/>
  Access Level:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
 
