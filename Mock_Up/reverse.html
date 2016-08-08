@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<script>
+//method1
+function reverseString(str) {
+   
+    var abc = str.split(""); 
+    // ["h", "e", "l", "l", "o"]
+ 
+   
+    var reverseArray = abc.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    //Step 4. Return the reversed string
+    return joinArray; // "olleh"
+}
+
+ 
+document.write(reverseString("hello")); //olleh
+var t0 = performance.now();
+  console.log(t0);
+    var result = reverseString("hello");
+    var t1 = performance.now();
+    console.log(t1);
+    console.log("execution time for method1="+(t1-t0));
+
+//method2
+
+function reverseString2(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+var t0 = performance.now();
+  console.log(t0);
+    var result = reverseString2("hello");
+    var t1 = performance.now();
+    console.log(t1);
+    console.log("execution time for method2="+(t1-t0));
+document.write("<br/>"+reverseString2('hello'));
+
+//method3
+//The depth of the recursion is equal to the length of the String. This solution is not the best one and will be really slow if the String is very long
+function reverseString3(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString3(str.substr(1)) + str.charAt(0);
+}
+var t0 = performance.now();
+  console.log(t0);
+    var result = reverseString3("hello");
+    var t1 = performance.now();
+    console.log(t1);
+    console.log("execution time for method3="+(t1-t0));
+document.write("<br/>"+reverseString("hello"));
+
+// execution time for method2 is always lesser than other 2 methods
+// so method2 by using for loop is faster approach performance 
+//wise.
+</script>
+</head>
+<body>
+</body>
+</html>
