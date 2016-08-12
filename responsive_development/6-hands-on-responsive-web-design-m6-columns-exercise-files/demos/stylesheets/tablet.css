@@ -1,0 +1,42 @@
+@media only screen and (min-width: 641px) {
+
+
+/*-----NAVIGATION -----*/	
+nav ul li a br {display: none;}
+
+
+
+/*-----CONTENT -----*/
+
+.column-6{
+	width:50%;
+	float:left;
+}
+.column-3{
+	width:25%;
+	float:left;
+}
+
+.column-4{
+	width:33.33%;
+	float:left;
+}
+
+.column-2{
+	width:33.33%;
+	float:left;
+}
+
+#contentWrapper .row{
+/*background-color: tan;
+  border-bottom:1px orange dashed; */
+}
+
+#contentWrapper .row:after{
+content: "";
+  display: table;
+  clear: both;
+  
+}
+
+} /*end of the media query */
