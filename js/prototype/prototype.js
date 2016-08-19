@@ -24,6 +24,7 @@ console.log(animal.__proto__); // object
 console.log(animal.__proto__.__proto__); //null
 
 
+
 //If the property is found in physiotherapist, 
 //then __proto__ is not checked.
 var doctor = { checks_up: false };
@@ -57,3 +58,5 @@ var abc=new man('abc','white');
 console.log(abc); // man { language:'hindi', name:'abc',skin:'white'}
 console.log(abc.__proto__); //human
 console.log(abc.__proto__.__proto__);//object
+console.log(human.prototype);
+console.log(man.prototype);

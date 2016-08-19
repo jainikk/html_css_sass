@@ -1,0 +1,249 @@
+@media only screen and (max-width : 641px) {
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; }
+input{
+	position:relative;
+	
+}
+
+#uploadGreeting{
+	position:relative;
+	width:40%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+body{
+	position:relative;
+	font-size:16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300; /*alsoo loaded 600 */
+}
+
+/* line 4, ../sass/modules/_controls.scss */
+header {
+	position:relative;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+  border-bottom: 5px solid #6495ED;
+}
+
+/* line 9, ../sass/modules/_controls.scss */
+header .user_image {
+  margin: 10px 340px;
+  border: 2px solid white;
+  float: right;
+}
+
+/* line 15, ../sass/modules/_controls.scss */
+header .user_name {
+  float: right;
+  margin: -6% 290px;
+  color: white;
+}
+
+/* line 20, ../sass/modules/_controls.scss */
+header .icon-section {
+  position:absolute;
+  margin: 0 0 0 65%;
+  border-left: 1px solid red;
+  width:140px;
+  height:67px;
+}
+
+/* line 25, ../sass/modules/_controls.scss */
+header .icon-section ul {
+  overflow: hidden;
+  
+}
+
+/* line 28, ../sass/modules/_controls.scss */
+header .icon-section ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 32, ../sass/modules/_controls.scss */
+header .icon-section ul li a {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 36, ../sass/modules/_controls.scss */
+header .icon-section ul li a:hover {
+  color: black;
+}
+
+/* line 39, ../sass/modules/_controls.scss */
+#main_left {
+  height: 200px;
+  width: 200px;
+}
+
+/* line 42, ../sass/modules/_controls.scss */
+.profilepic_display {
+  float: left;
+  margin: 20px;
+  height: 170px;
+  width: 170px;
+  background-color: #40E0D0;
+}
+
+/* line 48, ../sass/modules/_controls.scss */
+.greetingpic_display {
+  float: left;
+  margin: 20px 0 0 22%;
+  height: 80px;
+  width: 220px;
+  background-color: white;
+  text-align: center;
+  padding: 10% 0 0 0;
+  border: 1px solid #ccc;
+}
+
+/* line 58, ../sass/modules/_controls.scss */
+.upload_pic {
+  float: left;
+  margin: 10px;
+}
+
+/* line 63, ../sass/modules/_controls.scss */
+.fileUpload, .fileUpload_greeting {
+  position: relative;
+  overflow: hidden;
+  margin: -20px 0 0 120px;
+  background-color: #e7e7e7;
+  color: black;
+  border: 1px solid black;
+  height: 20px;
+  width: 60px;
+}
+
+/* line 72, ../sass/modules/_controls.scss */
+.fileUpload_greeting {
+  margin: -20px 0 0 300px;
+}
+
+/* line 75, ../sass/modules/_controls.scss */
+.fileUpload input.upload, .fileUpload_greeting input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 84, ../sass/modules/_controls.scss */
+#uploadFile {
+  height: 15px;
+  position:relative;
+  width: 60%;
+}
+
+/* line 88, ../sass/modules/_controls.scss */
+#uploadbutton {
+  float: left;
+  margin: 7px;
+}
+
+/* line 92, ../sass/modules/_controls.scss */
+.textbox1, .textbox2, .textbox3, .textbox4 {
+  float: right;
+  height: 30px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* line 99, ../sass/modules/_controls.scss */
+.textbox1, .textbox2, .textbox3, .textbox4 {
+	position:relative;
+	width:50%;
+  margin: -8px 0 0 10px;
+}
+
+/* line 103, ../sass/modules/_controls.scss */
+#main_right {
+  float: left;
+  margin: 2% 0 0 5%;
+}
+
+/* line 109, ../sass/modules/_controls.scss */
+.warning {
+  color: red;
+}
+
+/* line 113, ../sass/modules/_controls.scss */
+.buttons {
+  float: left;
+  margin: 10px;
+  height: 45px;
+  width: 100%;
+  background-color: #40E0D0;
+}
+
+/* line 119, ../sass/modules/_controls.scss */
+.cancel_button {
+  height: 30px;
+  width: 20%;
+  position: absolute;
+  margin: 1% 0 0 79%;
+  color: black;
+}
+
+/* line 125, ../sass/modules/_controls.scss */
+.save_button {
+  height: 30px;
+  width: 20%;
+  position: absolute;
+  background-color: #FF00FF;
+  color: white;
+  margin: 1% 0 0 58%;
+}
+
+/* line 133, ../sass/modules/_controls.scss */
+.footer {
+  float: left;
+  margin: 20px;
+  background-color: black;
+  height: 30px;
+  width: 100%;
+}
+
+#namemessage1{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage2{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage3{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage4{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+
+#namemessage5{
+width:350px;
+height:15px;
+//border:1px solid black;
+}
+.red{
+color:red; }
+
+#errorbox{
+display:none; }
+
+}
